@@ -1,13 +1,13 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 // Add imports above this line
+
 import { galleryItems } from './gallery-items';
 // Change code below this line
-
 console.log(galleryItems);
 
-const galleryEl = document.querySelector('.gallery');
-console.log(galleryEl);
-
-galleryEl.insertAdjacentHTML('beforeend', galleryMarkup(galleryItems));
+const gallery = document.querySelector('.gallery');
+gallery.insertAdjacentHTML('beforeend', galleryMarkup(galleryItems));
 
 function galleryMarkup(array) {
   return array
@@ -24,3 +24,8 @@ function galleryMarkup(array) {
     )
     .join('');
 }
+
+const gallerySimple = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
