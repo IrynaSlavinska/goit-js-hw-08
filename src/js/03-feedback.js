@@ -30,7 +30,7 @@ function onSubmitClick(event) {
     localStorage.removeItem(STORAGE_KEY);
     refs.feedbackForm.reset();
 
-    inputValue = { email: '', message: '' };
+    inputValue = { email: email, message: message };
 
     console.log(inputValue);
   }
