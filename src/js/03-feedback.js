@@ -29,8 +29,10 @@ function onSubmitClick(event) {
   } else {
     localStorage.removeItem(STORAGE_KEY);
     refs.feedbackForm.reset();
-    // console.log(inputValue);
+
     inputValue = { email: '', message: '' };
+
+    console.log(inputValue);
   }
 }
 
